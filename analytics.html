@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meeting Analytics – MeetSmart</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <link rel="stylesheet" href="analytics.css"/>
+  <link rel="icon" href="logo.svg"/>
+</head>
+<body class="db-page">
+
+<div class="app-shell">
+
+  <!-- ══════════ SIDEBAR ══════════ -->
+  <aside class="app-sidebar" id="appSidebar">
+    <div class="sidebar-logo">
+      <a href="dashboard.html" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" fill="none" width="28" height="26">
+          <defs>
+            <linearGradient id="sl1" x1="10%" y1="0%" x2="90%" y2="100%">
+              <stop offset="0%" stop-color="#2ECFBF"/>
+              <stop offset="100%" stop-color="#0A6B60"/>
+            </linearGradient>
+          </defs>
+          <circle cx="76" cy="46" r="22" fill="url(#sl1)"/>
+          <circle cx="134" cy="38" r="18" fill="url(#sl1)"/>
+          <path d="M 36 178 C 36 118,54 86,76 86 C 98 86,106 116,106 148 L 106 178" stroke="url(#sl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 114 148 C 114 116,122 86,144 86 C 166 86,184 118,184 178" stroke="url(#sl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 106 148 C 106 132,110 122,110 122 C 110 122,114 132,114 148" stroke="url(#sl1)" stroke-width="15" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span style="font-size:.9rem;font-weight:700;">
+          <span style="color:#00B8A9;">meet</span><span style="color:#0D1117;"> smart</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="sidebar-section-label">Workspace</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="new-meeting.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Meetings
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Transcripts
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tasks
+      </a>
+      <a href="analytics.html" class="snav-item active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+    </nav>
+
+    <div class="sidebar-section-label" style="margin-top:16px">Management</div>
+    <nav class="sidebar-nav">
+      <a href="team.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-user" id="sidebarUser">
+        <div class="su-avatar">S</div>
+        <div class="su-info">
+          <div class="su-name">Sarah Chen</div>
+          <div class="su-role"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e09381928188a0838f8d90818e99ce838f8d">[email&#160;protected]</a></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ══════════ MAIN ══════════ -->
+  <main class="app-main">
+
+    <!-- Topbar -->
+    <div class="app-topbar an-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="an-page-title">
+        <h2>Meeting Analytics</h2>
+        <p>Insights and productivity metrics</p>
+      </div>
+      <div class="an-topbar-right">
+        <div class="an-period-wrapper" id="periodWrapper">
+          <div class="an-period-select" id="periodSelect">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span id="periodLabel">Last 30 Days</span>
+            <svg class="an-chevron" id="periodChevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="an-period-dropdown" id="periodDropdown">
+            <div class="an-period-option active" data-value="Last 30 Days">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Last 30 Days
+            </div>
+            <div class="an-period-option" data-value="Last 20 Days">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Last 20 Days
+            </div>
+            <div class="an-period-option" data-value="Last 10 Days">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Last 10 Days
+            </div>
+            <div class="an-period-option" data-value="Today">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Today
+            </div>
+          </div>
+        </div>
+        <button class="an-export-btn" id="exportBtn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export
+        </button>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="main-content an-content">
+
+      <!-- ── MEETING DURATION TRENDS (bar chart) ── -->
+      <div class="an-card an-trends-card">
+        <div class="an-card-header">
+          <div>
+            <div class="an-card-title">Meeting Duration Trends</div>
+            <div class="an-card-sub">Average meeting length over the past month</div>
+          </div>
+        </div>
+        <div class="an-chart-area">
+          <div class="an-bar-chart" id="durationChart">
+            <!-- 4 weekly bars with gradient teal matching project palette -->
+            <div class="an-week-bar">
+              <div class="an-wbar-fill" style="height:68%" data-label="45 min"></div>
+              <div class="an-wbar-label">Week 1</div>
+            </div>
+            <div class="an-week-bar">
+              <div class="an-wbar-fill" style="height:85%" data-label="54 min"></div>
+              <div class="an-wbar-label">Week 2</div>
+            </div>
+            <div class="an-week-bar">
+              <div class="an-wbar-fill" style="height:55%" data-label="38 min"></div>
+              <div class="an-wbar-label">Week 3</div>
+            </div>
+            <div class="an-week-bar">
+              <div class="an-wbar-fill" style="height:48%" data-label="32 min"></div>
+              <div class="an-wbar-label">Week 4</div>
+            </div>
+          </div>
+          <!-- Y-axis labels -->
+          <div class="an-yaxis">
+            <span>60m</span><span>45m</span><span>30m</span><span>15m</span>
+          </div>
+        </div>
+        <div class="an-trend-note">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00B8A9" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Average meeting duration decreased by 40% this month
+        </div>
+      </div>
+
+      <!-- ── 4 STAT CARDS ── -->
+      <div class="an-stats-row">
+        <div class="an-stat-card">
+          <div class="an-stat-label">Avg Meeting Duration</div>
+          <div class="an-stat-value">32 min</div>
+          <div class="an-stat-delta positive">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+            40% from last month
+          </div>
+        </div>
+        <div class="an-stat-card">
+          <div class="an-stat-label">Participation Rate</div>
+          <div class="an-stat-value">94%</div>
+          <div class="an-stat-delta positive">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+            8% improvement
+          </div>
+        </div>
+        <div class="an-stat-card">
+          <div class="an-stat-label">Task Completion</div>
+          <div class="an-stat-value">87%</div>
+          <div class="an-stat-delta positive">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+            12% this week
+          </div>
+        </div>
+        <div class="an-stat-card">
+          <div class="an-stat-label">Avg Efficiency Score</div>
+          <div class="an-stat-value">8.7/10</div>
+          <div class="an-stat-delta positive">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+            0.5 points
+          </div>
+        </div>
+      </div>
+
+      <!-- ── BOTTOM ROW: donut + top meetings + collaborators ── -->
+      <div class="an-bottom-row">
+
+        <!-- Meeting Types Breakdown (donut) -->
+        <div class="an-card an-donut-card">
+          <div class="an-card-header">
+            <div>
+              <div class="an-card-title">Meeting Types Breakdown</div>
+              <div class="an-card-sub">Distribution of meeting categories</div>
+            </div>
+          </div>
+          <div class="an-donut-wrap">
+            <svg viewBox="0 0 140 140" width="140" height="140" class="an-donut-svg">
+              <!-- Strategy 35% — teal -->
+              <circle cx="70" cy="70" r="54" fill="none" stroke="#E2E8F0" stroke-width="18"/>
+              <!-- Strategy 35% stroke-dasharray = 35% of circumference (339.3) = 118.7 -->
+              <circle cx="70" cy="70" r="54" fill="none" stroke="#00B8A9" stroke-width="18"
+                stroke-dasharray="119 220" stroke-dashoffset="0"
+                stroke-linecap="butt" transform="rotate(-90 70 70)" class="donut-seg"/>
+              <!-- Planning 30% = 101.8 -->
+              <circle cx="70" cy="70" r="54" fill="none" stroke="#7C70C8" stroke-width="18"
+                stroke-dasharray="102 220" stroke-dashoffset="-119"
+                stroke-linecap="butt" transform="rotate(-90 70 70)" class="donut-seg"/>
+              <!-- Review 20% = 67.9 -->
+              <circle cx="70" cy="70" r="54" fill="none" stroke="#F6AD55" stroke-width="18"
+                stroke-dasharray="68 220" stroke-dashoffset="-221"
+                stroke-linecap="butt" transform="rotate(-90 70 70)" class="donut-seg"/>
+              <!-- Other 15% = 50.9 -->
+              <circle cx="70" cy="70" r="54" fill="none" stroke="#48BB78" stroke-width="18"
+                stroke-dasharray="51 220" stroke-dashoffset="-289"
+                stroke-linecap="butt" transform="rotate(-90 70 70)" class="donut-seg"/>
+            </svg>
+            <div class="an-donut-center">
+              <div class="an-donut-num">127</div>
+              <div class="an-donut-lbl">Total<br/>Meetings</div>
+            </div>
+          </div>
+          <div class="an-legend">
+            <div class="an-legend-item"><span class="an-dot" style="background:#00B8A9"></span>Strategy (35%)</div>
+            <div class="an-legend-item"><span class="an-dot" style="background:#7C70C8"></span>Planning (30%)</div>
+            <div class="an-legend-item"><span class="an-dot" style="background:#F6AD55"></span>Review (20%)</div>
+            <div class="an-legend-item"><span class="an-dot" style="background:#48BB78"></span>Other (15%)</div>
+          </div>
+        </div>
+
+        <!-- Top Performing Meetings -->
+        <div class="an-card an-top-card">
+          <div class="an-card-header">
+            <div>
+              <div class="an-card-title">Top Performing Meetings</div>
+              <div class="an-card-sub">Highest efficiency scores this month</div>
+            </div>
+          </div>
+          <div class="an-top-list">
+            <div class="an-top-item">
+              <div class="an-top-rank">1</div>
+              <div class="an-top-info">
+                <div class="an-top-name">Product Roadmap Sync</div>
+                <div class="an-top-meta">8 participants · 45 min</div>
+              </div>
+              <div class="an-top-score-wrap">
+                <div class="an-top-bar-bg"><div class="an-top-bar-fill" style="width:96%"></div></div>
+                <span class="an-top-pct">96%</span>
+              </div>
+            </div>
+            <div class="an-top-item">
+              <div class="an-top-rank">2</div>
+              <div class="an-top-info">
+                <div class="an-top-name">Q3 Strategy Session</div>
+                <div class="an-top-meta">12 participants · 60 min</div>
+              </div>
+              <div class="an-top-score-wrap">
+                <div class="an-top-bar-bg"><div class="an-top-bar-fill" style="width:92%"></div></div>
+                <span class="an-top-pct">92%</span>
+              </div>
+            </div>
+            <div class="an-top-item">
+              <div class="an-top-rank">3</div>
+              <div class="an-top-info">
+                <div class="an-top-name">Client Review – Alpha</div>
+                <div class="an-top-meta">5 participants · 30 min</div>
+              </div>
+              <div class="an-top-score-wrap">
+                <div class="an-top-bar-bg"><div class="an-top-bar-fill" style="width:88%"></div></div>
+                <span class="an-top-pct">88%</span>
+              </div>
+            </div>
+            <div class="an-top-item">
+              <div class="an-top-rank">4</div>
+              <div class="an-top-info">
+                <div class="an-top-name">Leadership Weekly Sync</div>
+                <div class="an-top-meta">6 participants · 50 min</div>
+              </div>
+              <div class="an-top-score-wrap">
+                <div class="an-top-bar-bg"><div class="an-top-bar-fill" style="width:84%"></div></div>
+                <span class="an-top-pct">84%</span>
+              </div>
+            </div>
+            <div class="an-top-item">
+              <div class="an-top-rank">5</div>
+              <div class="an-top-info">
+                <div class="an-top-name">Sales Pipeline Review</div>
+                <div class="an-top-meta">9 participants · 40 min</div>
+              </div>
+              <div class="an-top-score-wrap">
+                <div class="an-top-bar-bg"><div class="an-top-bar-fill" style="width:80%"></div></div>
+                <span class="an-top-pct">80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Participation -->
+        <div class="an-card an-team-card">
+          <div class="an-card-header">
+            <div>
+              <div class="an-card-title">Team Participation</div>
+              <div class="an-card-sub">Engagement levels by member</div>
+            </div>
+          </div>
+          <div class="an-team-list">
+            <div class="an-team-item">
+              <div class="an-team-av" style="background:#00B8A9">S</div>
+              <div class="an-team-info">
+                <div class="an-team-name">Sarah Chen</div>
+                <div class="an-team-bar-bg"><div class="an-team-bar-fill" style="width:94%"></div></div>
+              </div>
+              <span class="an-team-pct">94%</span>
+            </div>
+            <div class="an-team-item">
+              <div class="an-team-av" style="background:#7C70C8">A</div>
+              <div class="an-team-info">
+                <div class="an-team-name">Alex Torres</div>
+                <div class="an-team-bar-bg"><div class="an-team-bar-fill" style="width:88%"></div></div>
+              </div>
+              <span class="an-team-pct">88%</span>
+            </div>
+            <div class="an-team-item">
+              <div class="an-team-av" style="background:#F6AD55">D</div>
+              <div class="an-team-info">
+                <div class="an-team-name">Daniel Wright</div>
+                <div class="an-team-bar-bg"><div class="an-team-bar-fill" style="width:76%"></div></div>
+              </div>
+              <span class="an-team-pct">76%</span>
+            </div>
+            <div class="an-team-item">
+              <div class="an-team-av" style="background:#48BB78">P</div>
+              <div class="an-team-info">
+                <div class="an-team-name">Priya Kato</div>
+                <div class="an-team-bar-bg"><div class="an-team-bar-fill" style="width:70%"></div></div>
+              </div>
+              <span class="an-team-pct">70%</span>
+            </div>
+            <div class="an-team-item">
+              <div class="an-team-av" style="background:#FC8181">E</div>
+              <div class="an-team-info">
+                <div class="an-team-name">Emma Liu</div>
+                <div class="an-team-bar-bg"><div class="an-team-bar-fill" style="width:65%"></div></div>
+              </div>
+              <span class="an-team-pct">65%</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end bottom row -->
+
+    </div><!-- end an-content -->
+  </main>
+</div>
+</body></html>

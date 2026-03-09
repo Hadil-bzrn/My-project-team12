@@ -1,0 +1,193 @@
+/* =====================================================
+   MeetSmart – new-meeting.css
+   Create New Meeting form — matches Image 6
+===================================================== */
+
+/* ── TOPBAR breadcrumb ── */
+.nm-topbar {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+}
+.nm-breadcrumb {
+  display: flex; align-items: center; gap: 6px;
+  font-size: .8rem; color: var(--text-muted);
+}
+.nm-breadcrumb a { color: var(--text-muted); }
+.nm-breadcrumb a:hover { color: var(--teal); }
+.nm-sep { color: var(--text-light); }
+.nm-breadcrumb span:last-child { color: var(--dark); font-weight: 500; }
+
+/* ── FORM CONTENT AREA ── */
+.nm-content {
+  padding: 32px 40px;
+  max-width: 700px;
+}
+
+/* ── FORM WRAP ── */
+.nm-form-wrap { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg);}
+
+.nm-form-header {
+  margin-bottom: 28px;
+}
+.nm-form-title {
+  font-size: 1.35rem; font-weight: 700; color: var(--dark); margin-bottom: 4px;
+}
+.nm-form-sub {
+  font-size: .82rem; color: var(--text-muted);
+}
+
+/* ── SECTIONS ── */
+.nm-section {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 20px 22px;
+  margin-bottom: 18px;
+}
+
+.nm-section-header {
+  display: flex; align-items: center; gap: 7px;
+  font-size: .78rem; font-weight: 600; color: var(--text-muted);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.nm-ai-header { color: var(--teal); }
+
+/* ── FIELDS ── */
+.nm-field {
+  margin-bottom: 14px;
+}
+.nm-field:last-child { margin-bottom: 0; }
+.nm-field label {
+  display: block; font-size: .75rem; font-weight: 600;
+  color: var(--text); margin-bottom: 6px;
+}
+.nm-field input[type="text"],
+.nm-field input[type="url"],
+.nm-field input[type="date"],
+.nm-field input[type="time"],
+.nm-field select,
+.nm-field textarea {
+  width: 100%; padding: 9px 13px;
+  border: 1.5px solid var(--border); border-radius: var(--r-sm);
+  font-size: .85rem; color: var(--dark); background: #fff;
+  transition: border-color .18s, box-shadow .18s; outline: none;
+}
+.nm-field input:focus,
+.nm-field select:focus,
+.nm-field textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(0,184,169,.1);
+}
+.nm-field textarea {
+  resize: vertical; min-height: 72px;
+}
+.nm-field input::placeholder,
+.nm-field textarea::placeholder {
+  color: var(--text-light);
+}
+
+/* ── 3-COLUMN ROW (Date, Time, Duration) ── */
+.nm-row3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* ── INPUT WITH ICON ── */
+.nm-input-icon {
+  position: relative;
+}
+.nm-input-icon input {
+  padding-right: 36px;
+}
+.nm-input-icon svg {
+  position: absolute; right: 12px; top: 50%;
+  transform: translateY(-50%); pointer-events: none;
+}
+
+/* ── INPUT WITH COPY BUTTON ── */
+.nm-input-copy {
+  position: relative;
+}
+.nm-input-copy input {
+  padding-right: 40px;
+}
+.nm-copy-btn {
+  position: absolute; right: 10px; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none; padding: 5px;
+  color: var(--text-light); cursor: pointer;
+  display: flex; align-items: center;
+  transition: color .2s;
+}
+.nm-copy-btn:hover { color: var(--teal); }
+
+/* ── TOGGLE ROWS ── */
+.nm-toggle-row {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.nm-toggle-row:last-child { border-bottom: none; padding-bottom: 0; }
+.nm-toggle-info { flex: 1; }
+.nm-toggle-label { font-size: .83rem; font-weight: 600; color: var(--dark); margin-bottom: 2px; }
+.nm-toggle-desc  { font-size: .72rem; color: var(--text-muted); line-height: 1.5; }
+
+/* ── TOGGLE SWITCH — teal, matching Image 6 ── */
+.nm-switch {
+  position: relative; display: inline-block;
+  width: 42px; height: 24px; flex-shrink: 0; margin-top: 2px;
+}
+.nm-switch input { opacity: 0; width: 0; height: 0; }
+.nm-slider {
+  position: absolute; inset: 0; cursor: pointer;
+  background: #CBD5E0; border-radius: 24px;
+  transition: background .25s;
+}
+.nm-slider::before {
+  content: '';
+  position: absolute; width: 18px; height: 18px;
+  border-radius: 50%; background: #fff;
+  top: 3px; left: 3px;
+  transition: transform .25s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.20);
+}
+.nm-switch input:checked + .nm-slider { background: var(--teal); }
+.nm-switch input:checked + .nm-slider::before { transform: translateX(18px); }
+.nm-switch input:focus + .nm-slider { box-shadow: 0 0 0 3px rgba(0,184,169,.2); }
+
+/* ── FORM ACTIONS ── */
+.nm-form-actions {
+  display: flex; justify-content: flex-end; align-items: center;
+  gap: 12px; padding-top: 8px;
+}
+.nm-cancel {
+  padding: 9px 20px;
+}
+.nm-submit {
+  padding: 9px 22px; gap: 7px;
+}
+
+/* ── SUCCESS STATE ── */
+.nm-success-msg {
+  display: none;
+  text-align: center; padding: 48px 24px;
+}
+.nm-success-msg.show { display: block; }
+.nm-success-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--teal-light);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .nm-content { padding: 20px 16px; }
+  .nm-row3 { grid-template-columns: 1fr; }
+  .nm-form-actions { flex-direction: column-reverse; }
+  .nm-cancel, .nm-submit { width: 100%; justify-content: center; }
+}

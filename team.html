@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Members – MeetSmart</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <link rel="stylesheet" href="team.css"/>
+  <link rel="icon" href="logo.svg"/>
+</head>
+<body class="db-page">
+<div class="app-shell">
+
+  <!-- ══════ SIDEBAR ══════ -->
+  <aside class="app-sidebar" id="appSidebar">
+    <div class="sidebar-logo">
+      <a href="dashboard.html" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" fill="none" width="28" height="26">
+          <defs><linearGradient id="sl1" x1="10%" y1="0%" x2="90%" y2="100%"><stop offset="0%" stop-color="#2ECFBF"/><stop offset="100%" stop-color="#0A6B60"/></linearGradient></defs>
+          <circle cx="76" cy="46" r="22" fill="url(#sl1)"/>
+          <circle cx="134" cy="38" r="18" fill="url(#sl1)"/>
+          <path d="M 36 178 C 36 118,54 86,76 86 C 98 86,106 116,106 148 L 106 178" stroke="url(#sl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 114 148 C 114 116,122 86,144 86 C 166 86,184 118,184 178" stroke="url(#sl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 106 148 C 106 132,110 122,110 122 C 110 122,114 132,114 148" stroke="url(#sl1)" stroke-width="15" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span style="font-size:.9rem;font-weight:700;"><span style="color:#00B8A9;">meet</span><span style="color:#0D1117;"> smart</span></span>
+      </a>
+    </div>
+    <div class="sidebar-section-label">Workspace</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="new-meeting.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Meetings
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Transcripts
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tasks
+      </a>
+      <a href="analytics.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+    </nav>
+    <div class="sidebar-section-label" style="margin-top:16px">Management</div>
+    <nav class="sidebar-nav">
+      <a href="team.html" class="snav-item active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team
+      </a>
+      <a href="settings.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Settings
+      </a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-user" id="sidebarUser">
+        <div class="su-avatar">S</div>
+        <div class="su-info">
+          <div class="su-name">Sarah Chen</div>
+          <div class="su-role"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3d0c2d1c2cbe3c0ccced3c2cdda8dc0ccce">[email&#160;protected]</a></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ══════ MAIN ══════ -->
+  <main class="app-main">
+
+    <!-- Topbar -->
+    <div class="app-topbar tm-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="tm-title-block">
+        <h2>Team Members</h2>
+        <span class="tm-badge" id="memberBadge">4 members</span>
+      </div>
+      <div class="tm-topbar-right">
+        <div class="tm-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="searchInput" placeholder="Search by name or team…"/>
+        </div>
+        <a href="invite-member.html" class="tm-invite-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Invite Member
+        </a>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="main-content tm-content">
+
+      <!-- Members Grid -->
+      <div class="tm-grid" id="memberGrid">
+
+        <!-- Card: Sarah Chen -->
+        <div class="tm-card" data-name="Sarah Chen" data-team="Product">
+          <div class="tm-card-inner">
+            <div class="tm-card-header">
+              <div class="tm-avatar" style="background:linear-gradient(135deg,#2ECFBF,#00B8A9)">SC</div>
+              <div class="tm-card-menu" data-id="1">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <div class="tm-member-name">Sarah Chen</div>
+            <div class="tm-member-role">Product Manager</div>
+            <div class="tm-team-tag teal">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Product Team
+            </div>
+            <div class="tm-divider"></div>
+            <div class="tm-stats">
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">23</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  meetings
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">18</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/></svg>
+                  tasks
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">95%</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  done
+                </div>
+              </div>
+            </div>
+            <div class="tm-card-footer">
+              <span class="tm-status-pill online"><span class="tm-dot"></span>Online</span>
+              <button class="tm-msg-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Message
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Mike Johnson -->
+        <div class="tm-card" data-name="Mike Johnson" data-team="Engineering">
+          <div class="tm-card-inner">
+            <div class="tm-card-header">
+              <div class="tm-avatar" style="background:linear-gradient(135deg,#667EEA,#764BA2)">MJ</div>
+              <div class="tm-card-menu" data-id="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <div class="tm-member-name">Mike Johnson</div>
+            <div class="tm-member-role">Engineering Lead</div>
+            <div class="tm-team-tag purple">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Engineering
+            </div>
+            <div class="tm-divider"></div>
+            <div class="tm-stats">
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">31</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  meetings
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">24</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/></svg>
+                  tasks
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">88%</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  done
+                </div>
+              </div>
+            </div>
+            <div class="tm-card-footer">
+              <span class="tm-status-pill online"><span class="tm-dot"></span>Online</span>
+              <button class="tm-msg-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Message
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Emma Davis -->
+        <div class="tm-card" data-name="Emma Davis" data-team="Marketing">
+          <div class="tm-card-inner">
+            <div class="tm-card-header">
+              <div class="tm-avatar" style="background:linear-gradient(135deg,#F6AD55,#ED8936)">ED</div>
+              <div class="tm-card-menu" data-id="3">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <div class="tm-member-name">Emma Davis</div>
+            <div class="tm-member-role">Marketing Director</div>
+            <div class="tm-team-tag orange">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Marketing
+            </div>
+            <div class="tm-divider"></div>
+            <div class="tm-stats">
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">19</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  meetings
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">15</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/></svg>
+                  tasks
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">92%</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  done
+                </div>
+              </div>
+            </div>
+            <div class="tm-card-footer">
+              <span class="tm-status-pill away"><span class="tm-dot"></span>Away</span>
+              <button class="tm-msg-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Message
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Alex Kim -->
+        <div class="tm-card" data-name="Alex Kim" data-team="Design">
+          <div class="tm-card-inner">
+            <div class="tm-card-header">
+              <div class="tm-avatar" style="background:linear-gradient(135deg,#FC8181,#E53E3E)">AK</div>
+              <div class="tm-card-menu" data-id="4">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <div class="tm-member-name">Alex Kim</div>
+            <div class="tm-member-role">UX Designer</div>
+            <div class="tm-team-tag red">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Design
+            </div>
+            <div class="tm-divider"></div>
+            <div class="tm-stats">
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">15</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  meetings
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">12</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/></svg>
+                  tasks
+                </div>
+              </div>
+              <div class="tm-stat-box">
+                <div class="tm-stat-val">90%</div>
+                <div class="tm-stat-key">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  done
+                </div>
+              </div>
+            </div>
+            <div class="tm-card-footer">
+              <span class="tm-status-pill offline"><span class="tm-dot"></span>Offline</span>
+              <button class="tm-msg-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Message
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end tm-grid -->
+
+      <!-- Empty state -->
+      <div class="tm-empty" id="tmEmpty" style="display:none">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="1.4" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <p>No members found.</p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- ══════ INVITE MODAL ══════ -->
+<div class="tm-overlay" id="inviteModal">
+  <div class="tm-modal">
+
+    <!-- Modal Header -->
+    <div class="tm-modal-hd">
+      <div class="tm-modal-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+      </div>
+      <div>
+        <h3>Invite a New Member</h3>
+        <p>Fill in the details below to send an invitation.</p>
+      </div>
+      <button class="tm-modal-x" id="modalClose">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Modal Form -->
+    <form class="tm-modal-form" id="inviteForm" novalidate>
+
+      <!-- Full Name -->
+      <div class="tm-form-field">
+        <label for="inviteName">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Full Name <span class="req">*</span>
+        </label>
+        <input type="text" id="inviteName" placeholder="e.g. Jane Doe" autocomplete="off"/>
+        <div class="tm-field-err" id="nameErr">Please enter a full name.</div>
+      </div>
+
+      <!-- Team -->
+      <div class="tm-form-field">
+        <label for="inviteTeam">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Team <span class="req">*</span>
+        </label>
+        <div class="tm-select-wrap">
+          <select id="inviteTeam">
+            <option value="" disabled selected>Select a team…</option>
+            <option value="Product">Product</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Design">Design</option>
+            <option value="Sales">Sales</option>
+            <option value="Operations">Operations</option>
+            <option value="HR">HR</option>
+          </select>
+          <svg class="tm-select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="tm-field-err" id="teamErr">Please select a team.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="tm-form-field">
+        <label for="inviteEmail">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Address <span class="req">*</span>
+        </label>
+        <input type="email" id="inviteEmail" placeholder="jane@company.com" autocomplete="off"/>
+        <div class="tm-field-err" id="emailErr">Please enter a valid email address.</div>
+      </div>
+
+      <!-- Role (optional) -->
+      <div class="tm-form-field">
+        <label for="inviteRole">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Job Role <span class="tm-opt">(optional)</span>
+        </label>
+        <input type="text" id="inviteRole" placeholder="e.g. Product Designer"/>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="tm-modal-ft">
+        <button type="button" class="btn btn-ghost" id="modalCancel">Cancel</button>
+        <button type="submit" class="btn btn-primary tm-send-btn" id="modalSend">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Invite
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- Context Menu -->
+<div class="tm-ctx" id="ctxMenu">
+  <div class="tm-ctx-item" data-action="view"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>View Profile</div>
+  <div class="tm-ctx-item" data-action="message"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Send Message</div>
+  <div class="tm-ctx-item" data-action="meetings"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>View Meetings</div>
+  <div class="tm-ctx-sep"></div>
+  <div class="tm-ctx-item danger" data-action="remove">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>Remove Member</d>
+  </div></div></body></html>

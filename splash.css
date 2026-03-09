@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+
+.splash-body {
+  min-height: 100vh;
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.sp-wrap {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0;
+  animation: spFadeIn .5s ease both;
+}
+
+/* ── LOGO ── */
+.sp-logo {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 18px;
+  animation: spPop .7s cubic-bezier(.22,1,.36,1) .1s both;
+}
+.sp-img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  animation: spPop .7s cubic-bezier(.22,1,.36,1) .1s both;
+}
+
+/* ── PULSE RING ── */
+.sp-ring {
+  width: 140px; height: 140px; border-radius: 50%;
+  border: 2px solid rgba(0,184,169,.2);
+  position: absolute;
+  animation: spRing 1.8s ease-out infinite;
+  pointer-events: none;
+}
+
+/* ── PROGRESS BAR ── */
+.sp-bar-wrap {
+  margin-top: 52px;
+  width: 160px; height: 3px;
+  background: #E2E8F0; border-radius: 99px; overflow: hidden;
+}
+.sp-bar {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, #2ECFBF, #00B8A9);
+  border-radius: 99px;
+  transition: width .04s linear;
+}
+
+/* ── FADE OUT ── */
+.splash-body.fade-out {
+  animation: spFadeOut .45s ease forwards;
+}
+
+@keyframes spFadeIn  { from { opacity:0; } to { opacity:1; } }
+@keyframes spFadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes spPop     { from { opacity:0; transform:scale(.88); } to { opacity:1; transform:none; } }
+@keyframes spRing {
+  0%   { transform:scale(.7); opacity:.6; }
+  100% { transform:scale(1.6); opacity:0; }
+}

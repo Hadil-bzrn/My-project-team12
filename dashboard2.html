@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – MeetSmart</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2300B8A9'/><path d='M8 11h16M8 16h10M8 21h13' stroke='white' stroke-width='2.5' stroke-linecap='round'/></svg>"/>
+</head>
+<body class="db-page">
+
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="app-sidebar" id="appSidebar">
+    <div class="sidebar-logo">
+      <a href="dashboard.html" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" fill="none" width="28" height="26">
+          <defs><linearGradient id="dbl1" x1="10%" y1="0%" x2="90%" y2="100%"><stop offset="0%" stop-color="#2ECFBF"/><stop offset="100%" stop-color="#0A6B60"/></linearGradient></defs>
+          <circle cx="76" cy="46" r="22" fill="url(#dbl1)"/>
+          <circle cx="134" cy="38" r="18" fill="url(#dbl1)"/>
+          <path d="M 36 178 C 36 118, 54 86, 76 86 C 98 86, 106 116, 106 148 L 106 178" stroke="url(#dbl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 114 148 C 114 116, 122 86, 144 86 C 166 86, 184 118, 184 178" stroke="url(#dbl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 106 148 C 106 132, 110 122, 110 122 C 110 122, 114 132, 114 148" stroke="url(#dbl1)" stroke-width="15" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span style="font-size:.9rem;font-weight:700;"><span style="color:#00B8A9;">meet</span><span style="color:#0D1117;"> smart</span></span>
+      </a>
+    </div>
+
+    <div class="sidebar-section-label">Workspace</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="dashboard2.html" class="snav-item active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Meetings
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tasks
+      </a>
+      <a href="analytics.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+    </nav>
+
+    <div class="sidebar-section-label" style="margin-top:16px">Management</div>
+    <nav class="sidebar-nav">
+      <a href="team.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Company
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Settings
+      </a>
+      <div class="sidebar-user" id="sidebarUser">
+        <div class="su-avatar">S</div>
+        <div class="su-info">
+          <div class="su-name">Sarah Jenkins</div>
+          <div class="su-role">Product Manager</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="app-main">
+    <!-- Topbar -->
+    <div class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search meetings, people, or tasks…"/>
+      </div>
+      <div class="topbar-right">
+        <button class="topbar-icon-btn" id="alertBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Alerts
+          <span class="notif-badge">1</span>
+        </button>
+        <button class="btn btn-primary btn-sm" id="newMeetBtn">+ New meeting</button>
+        <div class="topbar-avatar" id="topbarAvatar">S</div>
+      </div>
+    </div>
+
+    <!-- Main content: Detailed Dashboard -->
+    <div class="main-content db2-layout">
+
+      <!-- LEFT COLUMN: greeting + stats + live + history -->
+      <div class="db2-left">
+
+        <div class="db2-greeting">
+          <div class="weekly-report-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00B8A9" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            AI meeting summary ready
+          </div>
+          <h2>Good morning, Sarah. Your<br/>meetings are getting sharper.</h2>
+          <p>MeetSmart has been tracking your team and your transcripts. It highlights decisions, and automatically assigns action items so your team can spend less time in meetings and more time on doing work.</p>
+        </div>
+
+        <!-- Metric chips -->
+        <div class="metric-chips">
+          <div class="metric-chip">
+            <div class="chip-val">18</div>
+            <div class="chip-lbl">Meetings this we…</div>
+            <div class="chip-sub">4 days scheduled</div>
+          </div>
+          <div class="metric-chip">
+            <div class="chip-val">46</div>
+            <div class="chip-lbl">Action items capt…</div>
+            <div class="chip-sub">892 total assigned</div>
+          </div>
+          <div class="metric-chip">
+            <div class="chip-val">32 min</div>
+            <div class="chip-lbl">Average duration</div>
+            <div class="chip-sub">Down from all time…</div>
+          </div>
+          <div class="metric-chip highlighted">
+            <div class="chip-val">87%</div>
+            <div class="chip-lbl">Efficiency score</div>
+            <div class="chip-sub">Top 17% two ago</div>
+          </div>
+        </div>
+
+        <!-- Live meeting overview -->
+        <div class="live-section">
+          <div class="live-section-header">
+            <span class="live-meeting-label"><span class="live-dot"></span> Live meeting overview</span>
+            <span class="live-section-sub">Follow real-time transcriptions, detected action items, and decisions while the meeting is still in prog…</span>
+            <button class="btn btn-sm" style="background:var(--teal-light);color:var(--teal);border:none;margin-left:auto">Recording pause</button>
+          </div>
+
+          <div class="live-card">
+            <div class="live-card-header">
+              <div class="lc-title">Product roadmap sync</div>
+              <div class="lc-meta">Today, 01:00 PM • 4 participants • Real-time transcription enabled</div>
+              <span class="badge badge-orange">Live meeting go</span>
+            </div>
+            <div class="live-card-body">
+              <div class="lc-col">
+                <div class="lc-col-label">Participation %</div>
+                <div class="lc-col-val">62%</div>
+              </div>
+              <div class="lc-col">
+                <div class="lc-col-label">Speaking by sales +16%</div>
+              </div>
+              <div class="lc-col">
+                <div class="lc-col-label">3 day score extracted</div>
+              </div>
+              <div class="lc-col">
+                <div class="lc-col-label">5 focus needed</div>
+              </div>
+            </div>
+            <div class="transcript-highlights">
+              <div class="th-title">Transcript highlights</div>
+              <div class="th-item">• Launch timeline was moved to May 10 after the engineering call most scope for the analytics module.</div>
+              <div class="th-item">• Marketing requested a short demo clip for the homepage and needs final product visuals for Thursday.</div>
+              <div class="th-item">• Customer success shared that onboarding calls are taking too long and wants a lighter setup flow.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent meeting history -->
+        <div class="history-section">
+          <div class="hs-header">
+            <span class="hs-title">Recent meeting history</span>
+            <span class="hs-sub">Every meeting ends with a structured summary, key decisions, and action points.</span>
+            <a href="#" class="panel-link">Open all meetings</a>
+          </div>
+          <div class="history-item">
+            <div class="hi-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="hi-info">
+              <div class="hi-name">Leadership weekly review</div>
+              <div class="hi-meta">Summary delivered • 3 decisions • 7 tasks assigned</div>
+            </div>
+            <span class="hi-date">Yesterday</span>
+          </div>
+          <div class="history-item">
+            <div class="hi-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="hi-info">
+              <div class="hi-name">Sales pipeline standup</div>
+              <div class="hi-meta">In metrics • every found collectively for well as each s were</div>
+            </div>
+            <span class="hi-date">Monday</span>
+          </div>
+          <div class="history-item">
+            <div class="hi-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="hi-info">
+              <div class="hi-name">Campaign planning session</div>
+              <div class="hi-meta">Discussing examples and shared to the marketing team</div>
+            </div>
+            <span class="hi-date">May 12</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Action Items + Analytics + Team Activity -->
+      <div class="db2-right">
+
+        <!-- Action Items panel -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <h3>Action Items</h3>
+            <span class="panel-sub-note">Tasks extracted directly from conversations to see and see great automatically so</span>
+          </div>
+
+          <div class="detailed-action">
+            <div class="da-color-bar" style="background:#00B8A9"></div>
+            <div class="da-body">
+              <div class="da-name">Send final analytics mockups…</div>
+              <div class="da-meta">Assigned to Sarah • Due today</div>
+            </div>
+            <span class="priority-badge high">High</span>
+          </div>
+          <div class="detailed-action">
+            <div class="da-color-bar" style="background:#F6AD55"></div>
+            <div class="da-body">
+              <div class="da-name">Review onboarding flow p…</div>
+              <div class="da-meta">Assigned to Daniel • Due tom…</div>
+            </div>
+            <span class="priority-badge medium">Media in</span>
+          </div>
+          <div class="detailed-action">
+            <div class="da-color-bar" style="background:#FC8181"></div>
+            <div class="da-body">
+              <div class="da-name">Approve timeline update b…</div>
+              <div class="da-meta">Assigned to Priya • Due Friday</div>
+            </div>
+            <span class="priority-badge review">Review</span>
+          </div>
+        </div>
+
+        <!-- Productivity Analytics -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <h3>Productivity analytics</h3>
+            <span class="panel-sub-note">Each bar effective your meetings are across the week</span>
+          </div>
+          <div class="analytics-chart-area">
+            <div class="db2-chart">
+              <div class="db2-bar-group">
+                <div class="db2-bar-col">
+                  <div class="db2-bar" style="height:55%;background:var(--teal-mid)"></div>
+                  <span>Mon</span>
+                </div>
+                <div class="db2-bar-col">
+                  <div class="db2-bar" style="height:75%;background:var(--teal)"></div>
+                  <span>Tue</span>
+                </div>
+                <div class="db2-bar-col">
+                  <div class="db2-bar" style="height:60%;background:var(--teal-mid)"></div>
+                  <span>Wed</span>
+                </div>
+                <div class="db2-bar-col">
+                  <div class="db2-bar" style="height:88%;background:var(--teal)"></div>
+                  <span>Thu</span>
+                </div>
+                <div class="db2-bar-col">
+                  <div class="db2-bar" style="height:65%;background:var(--teal-mid)"></div>
+                  <span>Fri</span>
+                </div>
+              </div>
+            </div>
+            <div class="analytics-stats-row">
+              <div class="ast">
+                <div class="ast-label">Participation level</div>
+                <div class="ast-val">79%</div>
+                <div class="ast-sub">4 direction focused…</div>
+              </div>
+              <div class="ast">
+                <div class="ast-label">Decision clarity</div>
+                <div class="ast-val">91%</div>
+                <div class="ast-sub">Mostly good goal…</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Activity -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <h3>Team activity</h3>
+            <span class="panel-sub-note">Who contributed and is doing follow-ups today</span>
+          </div>
+          <div class="team-activity-list">
+            <div class="ta-item">
+              <div class="ta-av" style="background:#00B8A9">S</div>
+              <div class="ta-body">
+                <div class="ta-name">Sarah Chen</div>
+                <div class="ta-action">To written completed this…</div>
+              </div>
+              <button class="ta-btn">Tap cont sutur</button>
+            </div>
+            <div class="ta-item">
+              <div class="ta-av" style="background:#F6AD55">D</div>
+              <div class="ta-body">
+                <div class="ta-name">Daniel a right</div>
+                <div class="ta-action">Doing an discusses in case their tren…</div>
+              </div>
+              <span class="ta-count">47</span>
+            </div>
+            <div class="ta-item">
+              <div class="ta-av" style="background:#FC8181">P</div>
+              <div class="ta-body">
+                <div class="ta-name">Priya Salis</div>
+                <div class="ta-action">Doing the detailed bassier no…</div>
+              </div>
+              <span class="ta-count">A summarr…</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="toast"></div>
+<script src="dashboard.js"></script>
+</body>
+</html>

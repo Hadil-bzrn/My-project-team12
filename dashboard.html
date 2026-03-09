@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – MeetSmart</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2300B8A9'/><path d='M8 11h16M8 16h10M8 21h13' stroke='white' stroke-width='2.5' stroke-linecap='round'/></svg>"/>
+</head>
+<body class="db-page">
+
+<!-- ══════════════ APP SHELL ══════════════ -->
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="app-sidebar" id="appSidebar">
+    <div class="sidebar-logo">
+      <a href="dashboard.html" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" fill="none" width="28" height="26">
+          <defs><linearGradient id="dbl1" x1="10%" y1="0%" x2="90%" y2="100%"><stop offset="0%" stop-color="#2ECFBF"/><stop offset="100%" stop-color="#0A6B60"/></linearGradient></defs>
+          <circle cx="76" cy="46" r="22" fill="url(#dbl1)"/>
+          <circle cx="134" cy="38" r="18" fill="url(#dbl1)"/>
+          <path d="M 36 178 C 36 118, 54 86, 76 86 C 98 86, 106 116, 106 148 L 106 178" stroke="url(#dbl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 114 148 C 114 116, 122 86, 144 86 C 166 86, 184 118, 184 178" stroke="url(#dbl1)" stroke-width="17" stroke-linecap="round" fill="none"/>
+          <path d="M 106 148 C 106 132, 110 122, 110 122 C 110 122, 114 132, 114 148" stroke="url(#dbl1)" stroke-width="15" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span style="font-size:.9rem;font-weight:700;"><span style="color:#00B8A9;">meet</span><span style="color:#0D1117;"> smart</span></span>
+      </a>
+    </div>
+
+    <div class="sidebar-section-label">Workspace</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="snav-item active" data-page="overview">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="dashboard2.html" class="snav-item" data-page="meetings">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Meetings
+      </a>
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tasks
+      </a>
+      <a href="analytics.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+    </nav>
+
+    <div class="sidebar-section-label" style="margin-top:16px">Management</div>
+    <nav class="sidebar-nav">
+      <a href="team.html" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="snav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Settings
+      </a>
+      <div class="sidebar-user" id="sidebarUser">
+        <div class="su-avatar">S</div>
+        <div class="su-info">
+          <div class="su-name">Sarah Jenkins</div>
+          <div class="su-role">Product Manager</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="app-main">
+    <!-- Top bar -->
+    <div class="app-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search meetings, people, or tasks…"/>
+      </div>
+      <div class="topbar-right">
+        <button class="topbar-icon-btn" id="alertBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Alerts
+          <span class="notif-badge">1</span>
+        </button>
+        <button class="btn btn-primary btn-sm" id="newMeetBtn">+ New meeting</button>
+        <div class="topbar-avatar" id="topbarAvatar">S</div>
+      </div>
+    </div>
+
+    <!-- Dashboard content -->
+    <div class="main-content">
+
+      <!-- ── Overview section (image 2 style) ── -->
+      <div class="page-header">
+        <div>
+          <h2 class="page-title">Overview</h2>
+          <p class="page-sub">Here's what is happening in your team's meetings today.</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn btn-ghost btn-sm" id="uploadBtn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Upload Recording
+          </button>
+          <button class="btn btn-primary btn-sm" id="startMeetBtn">▶ Start New Meeting</button>
+        </div>
+      </div>
+
+      <!-- STAT CARDS -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">
+            Avg. Meeting Duration
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="stat-value">34m</div>
+          <div class="stat-delta positive">↑ 12% less than last week</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">
+            Efficiency Score
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="stat-value">92%</div>
+          <div class="stat-delta positive">↑ +6% from last week</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">
+            Time Saved via AI
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="stat-value">8.5h</div>
+          <div class="stat-delta positive">↑ +1.2h from last week</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">
+            Action Items Completed
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="stat-value">24</div>
+          <div class="stat-delta neutral">Out of 32 assigned</div>
+        </div>
+      </div>
+
+      <!-- TWO COLUMN: Recent Meetings + Action Items -->
+      <div class="two-col-grid">
+        <!-- Recent Meetings -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <h3>Recent Meetings</h3>
+            <a href="dashboard2.html" class="panel-link">View All</a>
+          </div>
+
+          <div class="meeting-row">
+            <div class="meeting-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="meeting-info">
+              <div class="meeting-name">Q3 Product Roadmap Planning</div>
+              <div class="meeting-meta">
+                <span>Today, 10:00 AM</span>
+                <span>•</span>
+                <span>45 min</span>
+              </div>
+            </div>
+            <div class="meeting-avatars">
+              <div class="mtg-av" style="background:#00B8A9">J</div>
+              <div class="mtg-av" style="background:#F6AD55">M</div>
+              <div class="mtg-av" style="background:#FC8181">S</div>
+            </div>
+            <span class="badge badge-green">Summary Ready</span>
+          </div>
+
+          <div class="meeting-row">
+            <div class="meeting-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="meeting-info">
+              <div class="meeting-name">Engineering Weekly Sync</div>
+              <div class="meeting-meta">
+                <span>Yesterday, 2:00 PM</span>
+                <span>•</span>
+                <span>30 min</span>
+              </div>
+            </div>
+            <div class="meeting-avatars">
+              <div class="mtg-av" style="background:#9F7AEA">A</div>
+              <div class="mtg-av" style="background:#00B8A9">J</div>
+            </div>
+            <span class="badge badge-green">Summary Ready</span>
+          </div>
+
+          <div class="meeting-row">
+            <div class="meeting-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="meeting-info">
+              <div class="meeting-name">Client Discovery: Acme Corp</div>
+              <div class="meeting-meta">
+                <span>Oct 23, 10:00 AM</span>
+                <span>•</span>
+                <span>60 min</span>
+              </div>
+            </div>
+            <div class="meeting-avatars">
+              <div class="mtg-av" style="background:#F6AD55">K</div>
+              <div class="mtg-av" style="background:#FC8181">L</div>
+            </div>
+            <span class="badge badge-teal">Processing AI</span>
+          </div>
+        </div>
+
+        <!-- My Action Items -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <h3>My Action Items</h3>
+          </div>
+
+          <div class="action-item">
+            <div class="ai-check empty-check"></div>
+            <div class="ai-body">
+              <div class="ai-title">Update Figma prototypes for Dashboard</div>
+              <div class="ai-meta">In Q3 Product Roadmap Planning</div>
+              <div class="ai-due due-today">Due Today</div>
+            </div>
+          </div>
+          <div class="action-item">
+            <div class="ai-check empty-check"></div>
+            <div class="ai-body">
+              <div class="ai-title">Revise API documentation changes</div>
+              <div class="ai-meta">In Engineering Weekly Sync</div>
+              <div class="ai-due due-tomorrow">Due Tomorrow</div>
+            </div>
+          </div>
+          <div class="action-item completed">
+            <div class="ai-check done-check">✓</div>
+            <div class="ai-body">
+              <div class="ai-title">Schedule follow-up with Design team</div>
+              <div class="ai-meta">At Acme — deleted</div>
+              <div class="ai-due due-today">Due Today</div>
+            </div>
+          </div>
+
+          <button class="view-all-btn" id="viewAllTasks">View All Tasks</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="toast"></div>
+<script src="dashboard.js"></script>
+</body>
+</html>
